@@ -1,0 +1,6 @@
+*.pyc
+*.pyo
+build/
+dist/
+twitchy_term.egg-info/
+twitchyterm/__pycache__/
