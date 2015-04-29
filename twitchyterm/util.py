@@ -40,4 +40,4 @@ def log(output):
 	f.close() 
 
 def console(output):
-	print("[tt] %s" % output)
+	print("[twitchy-term] %s" % output)

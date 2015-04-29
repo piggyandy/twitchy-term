@@ -18,7 +18,7 @@ class GamesScreen(ScreenBase):
 
 		super(GamesScreen, self).__init__()
 		self.help = "'f':featured 'e':select game " \
-					"'s':search 'q':quit"
+					"'s':search 'c':change quality 'q':quit"
 
 		self.copy_members(screen)
 
@@ -48,6 +48,8 @@ class GamesScreen(ScreenBase):
 						(self.start_idx + self.items_on_page) < len(self.items.get('top'))):
 					self.start_idx += 1
 					self.update_screen()
+			elif event == curses.KEY_RESIZE:
+				self.resize_screen()
 			elif event == ord("f"):
 				return SCREEN_CODE['featured']
 			elif event == ord("e"):
@@ -55,8 +57,8 @@ class GamesScreen(ScreenBase):
 				return SCREEN_CODE['streams']
 			elif event == ord("s"):
 				return SCREEN_CODE['search']
-			elif event == curses.KEY_RESIZE:
-				self.resize_screen()
+			elif event == ord("c"):
+				self.change_quality()
 
 		curses.endwin()
 
@@ -126,7 +128,7 @@ class GamesScreen(ScreenBase):
 		self.help_bar.refresh()
 
 	def get_feed(self):
-		url = "https://api.twitch.tv/kraken/games/top"
+		url = "https://api.twitch.tv/kraken/games/top?limit=100"
 
 		response = urllib.request.urlopen(url)
 		content = response.read().decode(self.code)

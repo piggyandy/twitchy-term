@@ -141,7 +141,7 @@ class SearchScreen(ScreenBase):
 		# replace space with +
 		self.query = query
 		query = query.replace(" ", "+")	
-		url = "https://api.twitch.tv/kraken/search/streams?q=%s" % (str(query))
+		url = "https://api.twitch.tv/kraken/search/streams?q=%s&limit=100" % (str(query))
 		urllib.parse.quote(url)		
 
 		response = urllib.request.urlopen(url)

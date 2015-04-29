@@ -95,16 +95,22 @@ class ScreenBase(object):
 		try:
 			s = input_bar.getstr(0,0).decode(self.code)
 
-			if s in QUALITY:
-				self.args.quality = s
-			else:
-				self.help_bar.erase()
-				self.help_bar.addstr(0, 0, 'ERROR: quality does not exist.')
-				self.help_bar.refresh()
-				time.sleep(2)
+			curses.noecho()
+			curses.curs_set(0)
+
+			if s:
+				if s in QUALITY:
+					self.args.quality = s
+					self.help_bar.erase()
+					self.help_bar.addstr(0, 0, 'Quality has been set to: %s' % s)
+					self.help_bar.refresh()
+					time.sleep(2)
+				else:
+					self.help_bar.erase()
+					self.help_bar.addstr(0, 0, 'ERROR: quality does not exist.')
+					self.help_bar.refresh()
+					time.sleep(2)
 		except KeyboardInterrupt:
 			s = None
-		curses.noecho()
-		curses.curs_set(0)
 
 		self.update_screen()

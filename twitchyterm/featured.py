@@ -58,8 +58,7 @@ class FeaturedScreen(ScreenBase):
 			elif event == ord("s"):
 				return SCREEN_CODE['search']
 			elif event == ord("c"):
-				self.change_quality()
-			
+				self.change_quality()			
 
 		curses.endwin()
 
@@ -125,7 +124,7 @@ class FeaturedScreen(ScreenBase):
 
 		# top bar
 		self.top_bar.erase()
-		self.top_bar.addstr(0, 0, "Featured Games")
+		self.top_bar.addstr(0, 0, "Featured Streams")
 		self.top_bar.refresh()
 
 		# help bar
@@ -134,7 +133,7 @@ class FeaturedScreen(ScreenBase):
 		self.help_bar.refresh()
 
 	def get_feed(self):
-		url = "https://api.twitch.tv/kraken/streams/featured"
+		url = "https://api.twitch.tv/kraken/streams/featured?limit=100"
 		response = urllib.request.urlopen(url)
 		content = response.read().decode(self.code)
 		self.items = json.loads(content)

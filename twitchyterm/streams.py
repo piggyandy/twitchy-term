@@ -48,6 +48,8 @@ class StreamsScreen(ScreenBase):
 						(self.start_idx + self.items_on_page) < len(self.items.get('streams'))):
 					self.start_idx += 1
 					self.update_screen()
+			elif event == curses.KEY_RESIZE:
+				self.resize_screen()
 			elif event == ord("g"):
 				return SCREEN_CODE['games']
 			elif event == ord("f"):
@@ -58,8 +60,6 @@ class StreamsScreen(ScreenBase):
 				return SCREEN_CODE['search']
 			elif event == ord("c"):
 				self.change_quality()
-			elif event == curses.KEY_RESIZE:
-				self.resize_screen()
 
 		curses.endwin()
 
@@ -130,7 +130,7 @@ class StreamsScreen(ScreenBase):
 	def get_feed(self,game_name):
 		# replace space with +
 		game_name = game_name.replace(" ", "+")	
-		url = "https://api.twitch.tv/kraken/streams?game=%s" % (str(game_name))
+		url = "https://api.twitch.tv/kraken/streams?game=%s&limit=100" % (str(game_name))
 		urllib.parse.quote(url)
 		
 		response = urllib.request.urlopen(url)
