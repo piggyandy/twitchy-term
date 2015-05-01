@@ -4,7 +4,7 @@ Twitchy-Term
 
 A simple terminal tool for browsing Twitch.tv and watching streams on VLC Player using `Livestreamer <http://docs.livestreamer.io/>`_.
 
-.. image:: https://github.com/Andy-Au/twitchy-term/blob/master/twitchy-term.png
+.. image:: http://i.imgur.com/G0WCCUj.png
 
 ============
 Dependencies
@@ -67,15 +67,11 @@ Commands
 :``c``: Change stream quality
 :``q``: Quit
 
-::
-
-   In Top Games list
+*In Top Games list*
 
 :``e``: View top streams of current selected game
 
-::
-
-   In pages where streams are listed
+*In pages where streams are listed*
 
 :``p``: Play the selected stream in VLC player with current quality
 
