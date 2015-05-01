@@ -18,7 +18,15 @@ Dependencies
 Installation
 ============
 
-Clone this repository
+Using pip:
+
+.. code-block:: bash
+
+   $ sudo pip3 install twitchy-term
+
+**OR**
+
+Clone this repository:
 
 .. code-block:: bash
 

@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
 	name='twitchy-term',
-	version='1.0.0',
+	version='1.0.1',
 	description='A terminal tool for browsing/streaming on Twitch.tv.',
 	long_description=open('README.rst').read(),
 	url='https://github.com/Andy-Au/twitchy-term',
