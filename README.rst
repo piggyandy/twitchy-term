@@ -4,6 +4,8 @@ Twitchy-Term
 
 A simple terminal tool for browsing Twitch.tv and watching streams on VLC Player using `Livestreamer <http://docs.livestreamer.io/>`_.
 
+.. image:: https://github.com/Andy-Au/twitchy-term/blob/master/twitchy-term.png
+
 ============
 Dependencies
 ============
