@@ -2,7 +2,7 @@
 Twitchy-Term
 =============
 
-A simple terminal browser Twitch.tv and watch streams on VLC Player using `Livestreamer <http://docs.livestreamer.io/>`_.
+A simple terminal tool for browsing Twitch.tv and watching streams on VLC Player using `Livestreamer <http://docs.livestreamer.io/>`_.
 
 ============
 Dependencies
@@ -10,7 +10,7 @@ Dependencies
 
 * Python 3 (tested on version 3.4)
 * `Livestreamer <http://docs.livestreamer.io/>`_
-* VLC (:code:`sudo apt-get install vlc`)
+* VLC Player (:code:`sudo apt-get install vlc`)
 
 ============
 Installation
@@ -34,7 +34,7 @@ Simply run:
 
    $ twitchy-term
 
-It also takes an optional argument for streaming quality:
+It also takes an optional argument for streaming quality (default is best):
 
 .. code-block:: bash
 
