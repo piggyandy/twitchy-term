@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 setup(
 	name='twitchy-term',
 	version='1.0.0',
-	description='A command line interface for browsing/streaming on Twitch.tv.',
+	description='A terminal tool for browsing/streaming on Twitch.tv.',
 	long_description=open('README.rst').read(),
 	url='https://github.com/Andy-Au/twitchy-term',
 	author='Andy Au',
@@ -19,7 +19,8 @@ setup(
         'Natural Language :: English',
         'Programming Language :: Python :: 3 :: Only',
         'Programming Language :: Python :: 3.4',
-        'Topic :: Terminals',
+        'Topic :: Multimedia :: Video',
+        'Topic :: Multimedia :: Sound/Audio',
         'Topic :: Games/Entertainment',
         ],
     packages=find_packages(),
