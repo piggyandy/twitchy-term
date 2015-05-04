@@ -7,19 +7,19 @@ STREAM_ERR = b"The specified stream\(s\) \'\w*\' could not be found."
 NO_RESULTS = "No results found for "
 
 SCREEN_CODE = {
-	"exit": -1,
-	"featured": 0,
-	"games": 1,
-	"streams": 2,
-	"search": 3
+    "exit": -1,
+    "featured": 0,
+    "games": 1,
+    "streams": 2,
+    "search": 3
 }
 
 QUALITY = [
-	"best",
-	"high",
-	"medium",
-	"low",
-	"worst"
+    "best",
+    "high",
+    "medium",
+    "low",
+    "worst"
 ]
 
 DESCRIPTION = """
@@ -33,11 +33,11 @@ and watch streams on VLC Player using Livestreamer.
 EPILOG = ""
 
 def log(output):
-	"""Used for debugging purposes"""
+    """Used for debugging purposes"""
 
-	f = open('log.txt','a')
-	f.write(output) 
-	f.close() 
+    f = open('log.txt','a')
+    f.write(output) 
+    f.close() 
 
 def console(output):
-	print("[twitchy-term] %s" % output)
+    print("[twitchy-term] %s" % output)

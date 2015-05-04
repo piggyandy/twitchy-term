@@ -3,16 +3,16 @@
 from setuptools import setup, find_packages
 
 setup(
-	name='twitchy-term',
-	version='1.0.1',
-	description='A terminal tool for browsing/streaming on Twitch.tv.',
-	long_description=open('README.rst').read(),
-	url='https://github.com/Andy-Au/twitchy-term',
-	author='Andy Au',
-	author_email='au.andy.ch@gmail.com',
-	license='MIT',
-	keywords='twitch livestreamer command line interface terminal stream',
-	classifiers=[
+    name='twitchy-term',
+    version='1.0.1',
+    description='A terminal tool for browsing/streaming on Twitch.tv.',
+    long_description=open('README.rst').read(),
+    url='https://github.com/Andy-Au/twitchy-term',
+    author='Andy Au',
+    author_email='au.andy.ch@gmail.com',
+    license='MIT',
+    keywords='twitch livestreamer command line interface terminal stream',
+    classifiers=[
         'Intended Audience :: End Users/Desktop',
         'Environment :: Console :: Curses',
         'Operating System :: POSIX',
@@ -25,7 +25,7 @@ setup(
         ],
     packages=find_packages(),
     install_requires=['livestreamer'],
-	entry_points={
+    entry_points={
         'console_scripts': [
             'twitchy-term=twitchyterm.__main__:main',
         ],
